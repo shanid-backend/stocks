@@ -73,7 +73,7 @@ class StockController extends Controller
                   </div>
                   <div class="feature col">
                     <div class="feature-icon bg-gradient">
-                      <h5>Current Market Price</h5>
+                      <h5>Current Price</h5>
                     </div>
                     <h4> ₹ '.$item->Current_Market_Price.'<h4>
                   </div>
@@ -97,7 +97,7 @@ class StockController extends Controller
                   </div>
                   <div class="feature col">
                     <div class="feature-icon bg-gradient">
-                      <h5>ROE Previous Annum</h5>
+                      <h5>ROE</h5>
                     </div>
                     <h4>'.$item->ROE_Previous_Annum.'%<h4>
                   </div>
