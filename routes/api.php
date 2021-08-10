@@ -17,9 +17,12 @@ use App\Http\Controllers\StockController;
 */
 Route::post('login', [LoginController::class, 'login']);
 
-Route::get('/stocks', [StockController::class, 'home']);
+Route::group(['middleware' => 'auth:api'], function (){
+    
+    Route::get('/stocks', [StockController::class, 'home']);
 
-Route::get('/search', [StockController::class, 'search']);
+    Route::get('/search', [StockController::class, 'search']);
 
-Route::get('/items', [StockController::class, 'items']);
+    Route::get('/items', [StockController::class, 'items']);
+ });
 
